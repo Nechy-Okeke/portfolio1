@@ -30,6 +30,25 @@ header {
   margin-top: 10px;
 }
 
+/* ===== CV BUTTON ===== */
+.cv-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background: #0077ff;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cv-button:hover {
+  background: #005bb5;
+  transform: scale(1.05);
+}
+
 /* ===== CURSOR ANIMATION ===== */
 .cursor {
   display: inline-block;
