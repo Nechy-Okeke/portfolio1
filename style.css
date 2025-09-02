@@ -1,4 +1,4 @@
-/* ===== BASIC RESET ===== */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background: #0d1117; /* dark background */
+  color: #e6edf3; /* soft text */
   line-height: 1.6;
   text-align: center;
   padding: 20px;
@@ -21,12 +21,15 @@ header {
 
 .title {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  color: #555;
+  font-size: 1.3rem;
+  color: #aab4be;
   margin-top: 10px;
 }
 
@@ -39,13 +42,12 @@ header {
   font-weight: bold;
   text-decoration: none;
   color: white;
-  background: #0077ff;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
   border-radius: 8px;
-  transition: background 0.3s, transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .cv-button:hover {
-  background: #005bb5;
   transform: scale(1.05);
 }
 
@@ -53,7 +55,7 @@ header {
 .cursor {
   display: inline-block;
   width: 2px;
-  background-color: #0077ff;
+  background-color: #00c6ff;
   margin-left: 3px;
   animation: blink 0.7s infinite;
 }
@@ -68,7 +70,7 @@ header {
 .skills h2, .projects h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #0077ff;
+  color: #00c6ff;
 }
 
 .skills ul {
@@ -86,23 +88,23 @@ header {
 }
 
 .project-card {
-  background: white;
+  background: #161b22;
   border-radius: 10px;
   padding: 20px;
   margin: 15px auto;
   width: 80%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   transition: transform 0.3s;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
 /* ===== FOOTER ===== */
 footer {
   margin-top: 50px;
   font-size: 0.9rem;
-  color: #777;
+  color: #8b949e;
 }
