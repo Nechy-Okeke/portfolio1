@@ -1,110 +1,113 @@
-/* ===== RESET ===== */
-* {
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #0d1117; /* dark GitHub-like background */
+  color: #e6edf3; /* soft white */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #0d1117; /* dark background */
-  color: #e6edf3; /* soft text */
-  line-height: 1.6;
   text-align: center;
-  padding: 20px;
 }
 
-/* ===== HEADER ===== */
+/* Header */
 header {
-  margin-bottom: 40px;
+  padding: 80px 20px;
 }
 
-.title {
-  font-size: 3rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.typewriter {
+  font-size: 2.5rem;
+  border-right: 2px solid #58a6ff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+.highlight {
+  color: #58a6ff; /* nice blue accent */
 }
 
 .subtitle {
-  font-size: 1.3rem;
-  color: #aab4be;
   margin-top: 10px;
+  font-size: 1.2rem;
+  color: #8b949e;
 }
 
-/* ===== CV BUTTON ===== */
-.cv-button {
+.download-btn {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
+  background: #238636;
   color: white;
-  background: linear-gradient(90deg, #0072ff, #00c6ff);
-  border-radius: 8px;
-  transition: transform 0.2s;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.cv-button:hover {
-  transform: scale(1.05);
+.download-btn:hover {
+  background: #2ea043;
 }
 
-/* ===== CURSOR ANIMATION ===== */
-.cursor {
-  display: inline-block;
-  width: 2px;
-  background-color: #00c6ff;
-  margin-left: 3px;
-  animation: blink 0.7s infinite;
+/* Skills Section */
+#skills {
+  padding: 50px 20px;
+  background: #161b22;
 }
 
-@keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-/* ===== SKILLS ===== */
-.skills h2, .projects h2 {
-  font-size: 2rem;
+#skills h2 {
+  color: #58a6ff;
   margin-bottom: 20px;
-  color: #00c6ff;
 }
 
-.skills ul {
+#skills ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  font-size: 1.2rem;
+  padding: 0;
 }
 
-/* ===== PROJECTS ===== */
-.projects {
+#skills li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* Projects */
+#projects {
+  padding: 50px 20px;
+}
+
+#projects h2 {
+  color: #58a6ff;
+  margin-bottom: 20px;
+}
+
+.project-frame {
+  border: 2px solid #30363d;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  background: #161b22;
+  transition: transform 0.3s ease;
+}
+
+.project-frame:hover {
+  transform: scale(1.03);
+  border-color: #58a6ff;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #0d1117;
+  color: #8b949e;
   margin-top: 40px;
 }
 
-.project-card {
-  background: #161b22;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 15px auto;
-  width: 80%;
-  max-width: 500px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transition: transform 0.3s;
+/* Animations */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-/* ===== FOOTER ===== */
-footer {
-  margin-top: 50px;
-  font-size: 0.9rem;
-  color: #8b949e;
+@keyframes blink {
+  50% { border-color: transparent; }
 }
